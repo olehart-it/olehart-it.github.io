@@ -9,10 +9,59 @@
     <script src="./index.js" defer></script>
 </head>
 <body>
-    <div class="slider-container">
-        <button id="prevBtn">Предыдущий</button>
-        <img id="image" src="image1.jpg" alt="Image">
-        <button id="nextBtn">Cледующий</button>
-      </div>
+    <div class="row">
+        <div id="categories" class="column">
+        </div>
+        <div id="products" class="column">
+        </div>
+        <div id="product-details" class="column">
+            <div id="product-details-content"></div>
+        </div>
+    </div>
+    <div id="order-form" class="modal">
+        <div class="modal-content">
+            <h2>Оформление заказа</h2>
+            <form id="order-form-content">
+                <label for="customer-name">ПИБ:</label>
+                <input type="text" id="customer-name" required>
+                
+                <label for="city">Город:</label>
+                <select id="city" required>
+                    <option value="Киев">Киев</option>
+                    <option value="Львов">Львов</option>
+                    <option value="Одесса">Одесса</option>
+                    <option value="Днепр">Днепр</option>
+                    <option value="Харьков">Харьков</option>
+                </select>
+                
+                <label for="shipping-method">Склад Новой почты:</label>
+                <input type="text" id="shipping-method" required>
+                
+                <label for="payment-method">Наложеный или оплата банковской картой:</label>
+                <input type="text" id="payment-method" required>
+                
+                <label for="quantity">Количество продукции:</label>
+                <input type="number" id="quantity" required>
+                
+                <label for="comment">Комментарий к заказу:</label>
+                <textarea id="comment"></textarea>
+                
+                <button type="button" id="submit-order">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="order-details" class="modal">
+        <div class="modal-content">
+            <h2>Детали заказа</h2>
+            <div id="order-summary"></div>
+        </div>
+    </div>
+
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <p id="message-text"></p>
+        </div>
+    </div>
 </body>
 </html>
