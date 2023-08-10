@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+#prevBtn,
+#nextBtn {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  margin: 0 20px;
+}
